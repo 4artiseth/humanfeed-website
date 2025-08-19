@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HumanFeed is a Chrome extension that blocks ragebait, bots, and low-effort junk from your Twitter feed. No tracking, no algorithm - just your feed, your rules." />
     <title>The Best Email Ever Made</title>
+    <link rel="canonical" href="SITE_URL/" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +17,26 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SITE_NAME",
+      "url": "SITE_URL",
+      "description": "HumanFeed is a Chrome extension that blocks ragebait, bots, and low-effort junk from your Twitter feed. No tracking, no algorithm - just your feed, your rules.",
+      "foundingDate": "TODO_FOUNDING_DATE",
+      "email": "CONTACT_EMAIL",
+      "sameAs": [
+        "https://x.com/glowducky",
+        "https://www.linkedin.com/in/aarti-seth"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "CONTACT_EMAIL",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
   </head>
   <body>
     <!-- Custom Cursor -->
@@ -56,19 +78,24 @@
       <nav class="nav">
         <div class="nav-brand">
           <div class="logo">
-            <div class="logo-icon"></div>
+            <img
+              src="assets/logo/human.png"
+              alt="Human Logo"
+              class="logo-image"
+              loading="lazy"
+            />
           </div>
         </div>
         <div class="nav-links">
-          <a href="#" class="nav-link">Home</a>
-          <a href="#" class="nav-link">Solutions</a>
-          <a href="#" class="nav-link">Pricing</a>
-          <a href="#" class="nav-link">Contacts</a>
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#footer" class="nav-link">Contact</a>
         </div>
-        <button class="btn-start-today"><span>Start Today</span></button>
+        <a href="#hero" class="btn-start-today"><span>Get Free Access</span></a>
         <div class="mobile-menu-container">
           <div class="mobile-capsule">
-            <button class="capsule-start-btn"><span>Start Today</span></button>
+        <a href="#hero" class="capsule-start-btn"><span>Get Free Access</span></a>
             <button class="capsule-toggle" aria-label="Toggle menu">
               <span class="morph-line"></span>
               <span class="morph-line"></span>
@@ -76,17 +103,17 @@
           </div>
           <div class="expanded-menu">
             <div class="menu-items">
-              <a href="#" class="menu-item">Home</a>
-              <a href="#" class="menu-item">Solutions</a>
-              <a href="#" class="menu-item">Pricing</a>
-              <a href="#" class="menu-item">Contacts</a>
+              <a href="#hero" class="menu-item">Home</a>
+              <a href="#features" class="menu-item">Features</a>
+              <a href="#how-it-works" class="menu-item">How It Works</a>
+              <a href="#footer" class="menu-item">Contact</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="hero-section">
+    <main class="hero-section" id="hero">
       <!-- Concentric Circles Background -->
       <div class="rings">
         <div class="ring r1"></div>
@@ -98,230 +125,242 @@
 
       <!-- Circular PNG Icons -->
       <div class="icon-circle icon-1">
-        <img src="assets/pictures/afro-man-with-vr.png" alt="Person with VR">
+        <img src="assets/pictures/afro-man-with-vr.png" alt="Person with VR" loading="lazy" />
       </div>
       <div class="icon-circle icon-2">
-        <img src="assets/pictures/businessman.png" alt="Businessman">
+        <img src="assets/pictures/businessman.png" alt="Businessman" loading="lazy" />
       </div>
       <div class="icon-circle icon-3">
-        <img src="assets/pictures/man-with-hat.png" alt="Man with hat">
+        <img src="assets/pictures/man-with-hat.png" alt="Man with hat" loading="lazy" />
       </div>
       <div class="icon-circle icon-4">
-        <img src="assets/pictures/pink-shirt-man.png" alt="Man in pink shirt">
+        <img src="assets/pictures/pink-shirt-man.png" alt="Man in pink shirt" loading="lazy" />
       </div>
       <div class="icon-circle icon-5">
-        <img src="assets/pictures/short-hair-man-with-sweater.png" alt="Man with sweater">
+        <img
+          src="assets/pictures/short-hair-man-with-sweater.png"
+          alt="Man with sweater"
+          loading="lazy"
+        />
       </div>
       <div class="icon-circle icon-6">
-        <img src="assets/pictures/man-with-hat (1).png" alt="Man with hat variant">
+        <img
+          src="assets/pictures/man-with-hat (1).png"
+          alt="Man with hat variant"
+          loading="lazy"
+        />
       </div>
-      
-      <div class="hero-container">
 
-        <!-- Social proof badge -->
-        <div class="social-proof">
-          <div class="human-emojis">
-            <span class="emoji">👤</span>
-            <span class="emoji">👤</span>
-            <span class="emoji">👤</span>
-          </div>
-          <span class="counter-text"
-            ><span id="counter">37,483</span> bot posts every minute</span
-          >
+      <div class="hero-container">
+        <!-- Constrained copy container -->
+        <div class="hero-copy-container">
+          <!-- Main hero content - Desktop -->
+          <h1 class="hero-title">
+            Take Back
+            <span class="dotted-underline">your</span><br />
+            Twitter Feed<br />
+            from the Algorithm
+          </h1>
+
+          <!-- Mobile headline variation -->
+          <h1 class="hero-title-mobile">Drowning in Twitter Trash?</h1>
+
+          <p class="hero-subtitle">
+            <strong>HumanFeed</strong> (Chrome extension) that
+            <strong>blocks </strong>:  ragebait, bots, and low-effort junk 
+            so <br /> <strong>your feed</strong> shows only the conversations <strong>you care</strong> about. No tracking.<br />
+            <strong>No algorithm. Just your feed, your rules.</strong>
+          </p>
         </div>
 
-        <!-- Main hero content -->
-        <h1 class="hero-title">
-          The best email,<br />
-          ever made.
-        </h1>
+        <!-- Waitlist Form -->
+        <div class="waitlist-container">
+          <form class="waitlist-form" id="waitlistForm">
+            <div class="email-input-container">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+                class="email-input"
+              />
+              <button type="submit" class="btn-join-waitlist">
+                <span>Get Early Access</span>
+              </button>
+            </div>
+            <div id="message" class="form-message"></div>
+            <p class="waitlist-disclaimer">
+              <strong>Early tester spots are limited </strong>— installs open
+              in waves
+            </p>
+          </form>
+        </div>
 
-        <p class="hero-subtitle">
-          Get real-time notifications with our email app, ensuring you<br />
-          never miss an important message.
-        </p>
-
-        <div class="hero-buttons">
-          <button class="btn-get-started"><span>Get Started</span></button>
-          <button class="btn-reach-us">
-            <span>
-              <svg
-                class="twitter-icon"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                  fill="currentColor"
-                />
-              </svg>
-              Reach us
-            </span>
-          </button>
+        <!-- Mobile Video Section -->
+        <div class="mobile-video-container">
+          <video class="mobile-slider-video" autoplay muted loop playsinline>
+            <source src="assets/features/slider.mp4" type="video/mp4" />
+            <!-- Fallback for browsers that don't support video -->
+            <img src="assets/features/slider.gif" alt="App demonstration" />
+          </video>
         </div>
       </div>
     </main>
 
-    <!-- Features Section -->
-    <section class="features-section">
-      <div class="features-container">
-        <div class="features-header">
-          <h2 class="features-title">Features you<br />will love.</h2>
-          <p class="features-subtitle">
-            Manage emails for over 5,000 startups all<br />over the world,
-            making the process<br />seamless and efficient
+    <!-- Categorization Section -->
+    <section class="categorization-section">
+      <div class="categorization-container">
+        <div class="categorization-header">
+          <h2 class="categorization-title">GoodBye twitter trash!</h2>
+          <p class="categorization-subtitle">
+            Drag the slider to compare the  <br />algorithm’s chaos with your HumanFeed <br />so you know the difference you’ve made.<br />
           </p>
         </div>
-
-        <div class="features-grid">
-          <!-- Feature 1 - Security -->
-          <div class="feature-card">
-            <div class="feature-icon-container">
-              <div class="feature-icon security-icon">
-                <video class="feature-animation" autoplay muted loop>
-                  <source src="security-animation.mp4" type="video/mp4" />
-                  <img src="security-fallback.gif" alt="Security animation" />
-                </video>
+        <div class="categorization-card">
+          <!-- Desktop: Before/After Slider -->
+          <div class="before-after-slider desktop-only">
+            <div class="slider-images">
+              <div class="slider-image before-image">
+                <img src="assets/slider/after.png" alt="Before" loading="lazy" />
               </div>
-            </div>
-            <div class="feature-content">
-              <p class="feature-description">
-                We ensure every message stays
-                <strong>secure with advanced encryption</strong>, giving you
-                full control over who sees what and when.
-              </p>
+              <div class="slider-image after-image">
+                <img src="assets/slider/before.png" alt="After" loading="lazy" />
+              </div>
+              <div class="slider-handle" id="sliderHandle">
+                <div class="handle-line"></div>
+                <div class="handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 18L3 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="margin-left: 4px;">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 18L21 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Feature 2 - Notifications -->
-          <div class="feature-card">
-            <div class="feature-icon-container">
-              <div class="feature-icon notification-icon">
-                <video class="feature-animation" autoplay muted loop>
-                  <source src="notification-animation.mp4" type="video/mp4" />
-                  <img
-                    src="notification-fallback.gif"
-                    alt="Notification animation"
-                  />
-                </video>
-              </div>
+          
+          <!-- Mobile: Original Content -->
+          <div class="mobile-only">
+            <div class="content">
+              <div class="subtitle">AI-TAGS</div>
+              <div class="title">Categorization?<br />Done for you!</div>
+              <button class="btn-get-yours-free">
+                <span>Get Yours Free</span>
+              </button>
             </div>
-            <div class="feature-content">
-              <p class="feature-description">
-                Never miss an <strong>important message</strong>. Get notified
-                instantly, ensuring
-                <strong>you're always in the loop</strong> and ready.
-              </p>
-            </div>
-          </div>
-
-          <!-- Feature 3 - Smart Search -->
-          <div class="feature-card">
-            <div class="feature-icon-container">
-              <div class="feature-icon search-icon">
-                <video class="feature-animation" autoplay muted loop>
-                  <source src="search-animation.mp4" type="video/mp4" />
-                  <img src="search-fallback.gif" alt="Search animation" />
-                </video>
-              </div>
-            </div>
-            <div class="feature-content">
-              <p class="feature-description">
-                Identify errors with
-                <strong>smart notifications and search tools</strong>, helping
-                you stay organized and solve problems quickly.
-              </p>
-            </div>
-          </div>
-
-          <!-- Feature 4 - AI Assistant -->
-          <div class="feature-card">
-            <div class="feature-icon-container">
-              <div class="feature-icon ai-icon">
-                <video class="feature-animation" autoplay muted loop>
-                  <source src="ai-animation.mp4" type="video/mp4" />
-                  <img src="ai-fallback.gif" alt="AI animation" />
-                </video>
-              </div>
-            </div>
-            <div class="feature-content">
-              <p class="feature-description">
-                <strong>AI-powered email composition</strong> helps you write
-                better emails faster, with smart suggestions and tone
-                optimization.
-              </p>
-            </div>
-          </div>
-
-          <!-- Feature 5 - Analytics -->
-          <div class="feature-card">
-            <div class="feature-icon-container">
-              <div class="feature-icon analytics-icon">
-                <video class="feature-animation" autoplay muted loop>
-                  <source src="analytics-animation.mp4" type="video/mp4" />
-                  <img src="analytics-fallback.gif" alt="Analytics animation" />
-                </video>
-              </div>
-            </div>
-            <div class="feature-content">
-              <p class="feature-description">
-                Track email performance with
-                <strong>detailed analytics and insights</strong>, helping you
-                optimize your communication strategy.
-              </p>
-            </div>
-          </div>
-
-          <!-- Feature 6 - Team Collaboration -->
-          <div class="feature-card">
-            <div class="feature-icon-container">
-              <div class="feature-icon collaboration-icon">
-                <video class="feature-animation" autoplay muted loop>
-                  <source src="collaboration-animation.mp4" type="video/mp4" />
-                  <img
-                    src="collaboration-fallback.gif"
-                    alt="Collaboration animation"
-                  />
-                </video>
-              </div>
-            </div>
-            <div class="feature-content">
-              <p class="feature-description">
-                <strong>Seamless team collaboration</strong> with shared
-                inboxes, comments, and real-time updates across your entire
-                organization.
-              </p>
+            <div class="pill-container">
+              <div class="pill design">🧑‍🎨<span>Design</span></div>
+              <div class="pill family">✨<span>Family</span></div>
+              <div class="pill it-team">👩‍💻<span>IT-Team</span></div>
+              <div class="pill work">💼<span>Work</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Categorization Section -->
-    <section class="categorization-section">
-      <div class="categorization-container">
-        <div class="categorization-card">
-          <div class="content">
-            <div class="subtitle">AI-TAGS</div>
-            <div class="title">Categorization?<br />Done for you!</div>
-            <button class="btn-get-yours-free">
-              <span>Get Yours Free</span>
-            </button>
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="features-container">
+        <div class="features-header">
+          <h2 class="features-title"> Features<br />you will love.</h2>
+          <p class="features-subtitle">
+            Built for people tired of algorithm noise. <br />Privacy-first filters and simple rewards that <br />  keep your feed in your hands, not theirs.<br />
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 - Badges -->
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon security-icon">
+                <img class="feature-animation" src="assets/features/badges.png" alt="Badges feature" loading="lazy" />
+              </div>
+            </div>
+            <div class="feature-content">
+              <p class="feature-description">
+                <strong>Earn badges</strong> as you build better habits. Every choice to<strong> block noise or focus</strong> your feed becomes a small win you can see and track.
+              </p>
+            </div>
           </div>
-          <div class="pill-container">
-            <div class="pill design">🧑‍🎨<span>Design</span></div>
-            <div class="pill family">✨<span>Family</span></div>
-            <div class="pill it-team">👩‍💻<span>IT-Team</span></div>
-            <div class="pill work">💼<span>Work</span></div>
+
+          <!-- Feature 2 - Privacy -->
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon notification-icon">
+                <img class="feature-animation" src="assets/features/privacy.png" alt="Privacy feature" loading="lazy" />
+              </div>
+            </div>
+            <div class="feature-content">
+              <p class="feature-description">
+                Your data <strong>never</strong> leaves your device.
+                <strong>No tracking, no leaks, no middlemen.</strong> Just tools that work where they should: on your computer.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 - Graph -->
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon search-icon">
+                <video class="feature-animation" autoplay muted loop>
+                  <source src="assets/features/graph.mp4" type="video/mp4" />
+                  <img src="assets/features/graph.gif" alt="Graph animation" />
+                </video>
+              </div>
+            </div>
+            <div class="feature-content">
+              <p class="feature-description">
+                <strong>Track</strong> how much low-value content you’re being <strong>exposed</strong> to & how much you’ve <strong>eliminated</strong>. Turn attention management into something measurable.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 - Reward -->
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon ai-icon">
+                <video class="feature-animation" autoplay muted loop>
+                  <source src="assets/features/reward.mp4" type="video/mp4" />
+                  <img src="assets/features/reward.gif" alt="Reward animation" />
+                </video>
+              </div>
+            </div>
+            <div class="feature-content">
+              <p class="feature-description">
+                <strong>Unlock rewards</strong> for completeting simple <strong>challenges on X</strong>.
+                Build better social media habits and <strong>unlock plants</strong> to grow in your log.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 5 - Settings -->
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon collaboration-icon">
+                <video class="feature-animation" autoplay muted loop>
+                  <source src="assets/features/setting.mp4" type="video/mp4" />
+                  <img src="assets/features/setting.gif" alt="Settings animation" />
+                </video>
+              </div>
+            </div>
+            <div class="feature-content">
+              <p class="feature-description">
+                <strong>Fine-tune </strong> your feed on <strong>your terms.</strong> Decide exactly what to
+                <strong>block, mute, or highlight</strong> and never let an algorithm dictate your scroll again.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-it-works-section">
+    <section class="how-it-works-section" id="how-it-works">
       <div class="how-it-works-container">
         <div class="how-it-works-header">
           <h2 class="how-it-works-title">How It Works</h2>
@@ -367,8 +406,8 @@
             <div class="step-content">
               <h3 class="step-title">Install Extension</h3>
               <p class="step-description">
-                Add Unslopped to your browser with one click.
-                <strong>Compatible with Chrome, Firefox, and Edge.</strong>
+                Add HumanFeed to your browser with one click.
+                <strong>Compatible with Chrome.</strong>
               </p>
             </div>
           </div>
@@ -447,9 +486,9 @@
             <div class="step-content">
               <h3 class="step-title">Browse Normally</h3>
               <p class="step-description">
-                Visit LinkedIn or X as usual.
-                <strong>Unslopped runs seamlessly in the background</strong>
-                working overtime and helping you clean your feed.
+                Visit Twitter/X as usual.
+                <strong>HumanFeed runs seamlessly in the background</strong>
+                working overtime and helping you clean your feed and rewarding you for scrolling mindfully.
               </p>
             </div>
           </div>
@@ -500,21 +539,20 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer-container">
         <!-- Large Background Text -->
-        <div class="footer-bg-text">UNSLOP</div>
+        <div class="footer-bg-text">HUMANFEED</div>
 
         <!-- Footer Content -->
         <div class="footer-content">
           <!-- Left Column -->
           <div class="footer-left">
             <div class="footer-brand">
-              <h3 class="footer-title">Unslop.io</h3>
+              <h3 class="footer-title">HumanFeed.me</h3>
               <p class="footer-description">
-                Clean feeds for your productivity from<br />
-                over 5,000 users, making the<br />
-                process seamless and efficient.
+                Stop doomscrolling. Start enjoying Twitter again <br />On your terms<br />
+            
               </p>
             </div>
           </div>
@@ -534,10 +572,10 @@
             <div class="footer-column">
               <h4 class="footer-column-title">Menu</h4>
               <ul class="footer-links">
-                <li><a href="#" class="footer-link">Home</a></li>
-                <li><a href="#" class="footer-link">Solutions</a></li>
-                <li><a href="#" class="footer-link">Pricing</a></li>
-                <li><a href="#" class="footer-link">Contacts</a></li>
+                <li><a href="#hero" class="footer-link">Home</a></li>
+                <li><a href="#features" class="footer-link">Features</a></li>
+                <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+                <li><a href="#footer" class="footer-link">Contact</a></li>
               </ul>
             </div>
 
@@ -545,7 +583,7 @@
             <div class="footer-column">
               <h4 class="footer-column-title">Social Media</h4>
               <div class="footer-social">
-                <a href="#" class="footer-social-link">
+                <a href="https://x.com/glowducky" target="_blank" rel="noopener noreferrer" class="footer-social-link">
                   <svg
                     width="24"
                     height="24"
@@ -557,7 +595,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#" class="footer-social-link">
+                <a href="https://www.linkedin.com/in/aarti-seth" target="_blank" rel="noopener noreferrer" class="footer-social-link">
                   <svg
                     width="24"
                     height="24"
@@ -569,7 +607,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#" class="footer-social-link">
+                <a href="mailto:aarti1seth@outlook.com" class="footer-social-link">
                   <svg
                     width="24"
                     height="24"
@@ -577,7 +615,7 @@
                     fill="currentColor"
                   >
                     <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
                     />
                   </svg>
                 </a>
@@ -589,19 +627,6 @@
     </footer>
 
     <script>
-      // Counter animation
-      let counter = 37483;
-      const counterElement = document.getElementById("counter");
-
-      function updateCounter() {
-        const increment = Math.floor(Math.random() * 21) + 10; // Random number between 10-30
-        counter += increment;
-        counterElement.textContent = counter.toLocaleString();
-      }
-
-      // Update counter every 2 seconds
-      setInterval(updateCounter, 2000);
-
       // Mobile menu functionality - Unified morphing container
       const mobileContainer = document.querySelector(".mobile-menu-container");
       const capsuleToggle = document.querySelector(".capsule-toggle");
@@ -656,6 +681,340 @@
           customCursor.style.transform = "translate(-50%, -50%) scale(1)";
         });
       });
+
+      // Load Supabase and handle form submission
+      function loadSupabaseAndSetupForm() {
+        // Load Supabase script dynamically
+        const script = document.createElement("script");
+        script.src = "https://unpkg.com/@supabase/supabase-js@2";
+        script.onload = function () {
+          console.log("Supabase loaded successfully");
+          setupForm();
+        };
+        script.onerror = function () {
+          console.error(
+            "Failed to load Supabase from unpkg, trying alternative CDN"
+          );
+          // Try alternative CDN
+          const fallbackScript = document.createElement("script");
+          fallbackScript.src =
+            "https://cdn.skypack.dev/@supabase/supabase-js@2";
+          fallbackScript.onload = function () {
+            console.log("Supabase loaded successfully from fallback CDN");
+            setupForm();
+          };
+          fallbackScript.onerror = function () {
+            console.error("Failed to load Supabase from all CDNs");
+            const messageDiv = document.getElementById("message");
+            if (messageDiv) {
+              messageDiv.textContent =
+                "Failed to load required libraries. Please refresh the page.";
+              messageDiv.className = "form-message error";
+            }
+          };
+          document.head.appendChild(fallbackScript);
+        };
+        document.head.appendChild(script);
+      }
+
+      function setupForm() {
+        const supabaseUrl = "https://ihzangbfyvwlfmcbcexa.supabase.co";
+        const supabaseAnonKey =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImloemFuZ2JmeXZ3bGZtY2JjZXhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU0MTQyMTgsImV4cCI6MjA3MDk5MDIxOH0.yjZwGcc6TguWG_Vf_T3TEXFlihxVDeekoYTG80S17og";
+
+        // Initialize Supabase client
+        const supabaseClient = supabase.createClient(
+          supabaseUrl,
+          supabaseAnonKey
+        );
+
+        // Form submission handler
+        const form = document.getElementById("waitlistForm");
+        const messageDiv = document.getElementById("message");
+
+        if (!form || !messageDiv) {
+          console.error("Form elements not found");
+          return;
+        }
+
+        console.log("Form setup complete");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          console.log("Form submitted");
+
+          // Get email value
+          const email = document.getElementById("email").value;
+          console.log("Email:", email);
+
+          if (!email) {
+            const emailInput = document.getElementById("email");
+            emailInput.placeholder = "Please enter a valid email address";
+            emailInput.style.color = "#ef4444";
+            setTimeout(() => {
+              emailInput.placeholder = "Enter your email address";
+              emailInput.style.color = "";
+            }, 3000);
+            return;
+          }
+
+          // Show loading state
+          const emailInput = document.getElementById("email");
+          const originalValue = emailInput.value;
+          emailInput.value = "Adding you to the waitlist...";
+          emailInput.disabled = true;
+
+          try {
+            // Insert into Supabase table (no SELECT needed)
+            console.log("Inserting into Supabase...");
+            const { error } = await supabaseClient
+              .from("HumanFeed Waitlist")
+              .insert([{ email }]);
+
+            if (error) {
+              console.error("Supabase error:", error);
+              emailInput.value = "Error: " + error.message;
+              emailInput.style.color = "#ef4444";
+              emailInput.disabled = false;
+              setTimeout(() => {
+                emailInput.value = originalValue;
+                emailInput.style.color = "";
+              }, 3000);
+            } else {
+              console.log("Success: Email added to waitlist");
+              emailInput.value = "Success! You are on the waitlist.";
+              emailInput.style.color = "#22c55e";
+              setTimeout(() => {
+                form.reset();
+                emailInput.disabled = false;
+                emailInput.style.color = "";
+              }, 2000);
+            }
+          } catch (err) {
+            console.error("Submission error:", err);
+            emailInput.value = "Something went wrong. Please try again.";
+            emailInput.style.color = "#ef4444";
+            emailInput.disabled = false;
+            setTimeout(() => {
+              emailInput.value = originalValue;
+              emailInput.style.color = "";
+            }, 3000);
+          }
+        });
+      }
+
+      // Start the process when DOM is ready
+      document.addEventListener("DOMContentLoaded", loadSupabaseAndSetupForm);
+
+      // Button scroll behavior for both desktop and mobile
+      function handleButtonScroll() {
+        const heroSection = document.querySelector(".hero-section");
+        const nav = document.querySelector(".nav");
+
+        if (heroSection) {
+          // Trigger as soon as we scroll past the hero section
+          const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+          const scrollPosition = window.scrollY + 100; // Small offset for better visual transition
+
+          if (window.innerWidth <= 768) {
+            // Mobile behavior
+            const mobileStartButton =
+              document.querySelector(".capsule-start-btn");
+            if (mobileStartButton) {
+              if (scrollPosition >= heroBottom) {
+                mobileStartButton.classList.add("show-on-scroll");
+              } else {
+                mobileStartButton.classList.remove("show-on-scroll");
+              }
+            }
+          } else {
+            // Desktop behavior
+            const desktopStartButton =
+              document.querySelector(".btn-start-today");
+            if (desktopStartButton && nav) {
+              if (scrollPosition >= heroBottom) {
+                desktopStartButton.classList.add("show-on-scroll");
+                nav.classList.remove("hero-nav");
+              } else {
+                desktopStartButton.classList.remove("show-on-scroll");
+                nav.classList.add("hero-nav");
+              }
+            }
+          }
+        }
+      }
+
+      // Initialize navigation state
+      function initializeNavigation() {
+        const nav = document.querySelector(".nav");
+        if (nav && window.innerWidth > 768) {
+          nav.classList.add("hero-nav");
+        }
+        handleButtonScroll();
+      }
+
+      // Add scroll listener
+      window.addEventListener("scroll", handleButtonScroll);
+      window.addEventListener("resize", handleButtonScroll);
+
+      // Initial check
+      document.addEventListener("DOMContentLoaded", initializeNavigation);
+
+      // Before/After Slider functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.before-after-slider');
+        if (!slider) return; // Exit if slider not found (mobile)
+        
+        const handle = document.getElementById('sliderHandle');
+        const afterImage = document.querySelector('.after-image');
+        const sliderContainer = document.querySelector('.slider-images');
+        let isDragging = false;
+        let currentX = 50; // Start at center (50%)
+        let animationId = null;
+        let lastPercentage = 50;
+        
+        // Cache container rect for better performance
+        let containerRect = null;
+        
+        function updateContainerRect() {
+          containerRect = sliderContainer.getBoundingClientRect();
+        }
+        
+        function updateSlider(percentage) {
+          // Clamp percentage between 0 and 100
+          percentage = Math.max(0, Math.min(100, percentage));
+          
+          // Only update if percentage changed significantly (reduce unnecessary updates)
+          if (Math.abs(percentage - lastPercentage) < 0.1) return;
+          
+          // Use requestAnimationFrame for smooth updates
+          if (animationId) {
+            cancelAnimationFrame(animationId);
+          }
+          
+          animationId = requestAnimationFrame(() => {
+            // Update handle position with transform for better performance
+            // Using a fixed offset of -50% ensures it stays centered on the divider line
+            handle.style.left = `${percentage}%`;
+            handle.style.transform = 'translateX(-50%)';
+            
+            // Update after image clip-path
+            afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            
+            currentX = percentage;
+            lastPercentage = percentage;
+          });
+        }
+        
+        function getPercentageFromEvent(event) {
+          if (!containerRect) updateContainerRect();
+          
+          const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+          const x = clientX - containerRect.left;
+          return Math.max(0, Math.min(100, (x / containerRect.width) * 100));
+        }
+        
+        // Mouse events
+        handle.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          isDragging = true;
+          updateContainerRect(); // Update rect when starting drag
+          document.body.style.cursor = 'ew-resize';
+          
+          // Add event listeners to document for smooth dragging
+          document.addEventListener('mousemove', onMouseMove, { passive: true });
+          document.addEventListener('mouseup', onMouseUp, { passive: true });
+        });
+        
+        function onMouseMove(e) {
+          if (!isDragging) return;
+          
+          const percentage = getPercentageFromEvent(e);
+          updateSlider(percentage);
+        }
+        
+        function onMouseUp(e) {
+          if (!isDragging) return;
+          isDragging = false;
+          document.body.style.cursor = '';
+          
+          // Remove event listeners
+          document.removeEventListener('mousemove', onMouseMove);
+          document.removeEventListener('mouseup', onMouseUp);
+        }
+        
+        // Touch events for mobile support
+        handle.addEventListener('touchstart', function(e) {
+          e.preventDefault();
+          isDragging = true;
+          updateContainerRect();
+          
+          document.addEventListener('touchmove', onTouchMove, { passive: true });
+          document.addEventListener('touchend', onTouchEnd, { passive: true });
+        });
+        
+        function onTouchMove(e) {
+          if (!isDragging) return;
+          
+          const percentage = getPercentageFromEvent(e);
+          updateSlider(percentage);
+        }
+        
+        function onTouchEnd(e) {
+          if (!isDragging) return;
+          isDragging = false;
+          
+          document.removeEventListener('touchmove', onTouchMove);
+          document.removeEventListener('touchend', onTouchEnd);
+        }
+        
+        // Click to move functionality
+        sliderContainer.addEventListener('click', function(e) {
+          if (isDragging) return; // Don't interfere with dragging
+          
+          const percentage = getPercentageFromEvent(e);
+          
+          // Animate to new position smoothly
+          const startPercentage = currentX;
+          const endPercentage = percentage;
+          const duration = 250; // Reduced duration for snappier feel
+          const startTime = performance.now();
+          
+          function animate(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            
+            const newPercentage = startPercentage + (endPercentage - startPercentage) * easeProgress;
+            
+            // Direct update without throttling for animation using consistent left positioning
+            handle.style.left = `${newPercentage}%`;
+            handle.style.transform = 'translateX(-50%)';
+            afterImage.style.clipPath = `inset(0 ${100 - newPercentage}% 0 0)`;
+            currentX = newPercentage;
+            
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            }
+          }
+          
+          requestAnimationFrame(animate);
+        });
+        
+        // Handle resize events to update container rect
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(updateContainerRect, 100);
+        });
+        
+        // Initialize slider at center position
+        updateContainerRect();
+        updateSlider(50);
+      });
+
     </script>
   </body>
 </html>
