@@ -1942,8 +1942,7 @@ body {
   }
 
   .features-subtitle {
-    text-align: left;
-    margin-top: 0;
+    display: none;
   }
 
   .features-title {
@@ -2005,8 +2004,7 @@ body {
   }
 
   .how-it-works-subtitle {
-    text-align: left;
-    margin-top: 0;
+    display: none;
   }
 
   .how-it-works-title {
@@ -2016,6 +2014,15 @@ body {
   .how-it-works-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  /* Reduce spacing between features and how it works sections on mobile by half */
+  .features-section {
+    padding-bottom: 80px;
+  }
+
+  .how-it-works-section {
+    padding-top: 80px;
   }
 }
 
