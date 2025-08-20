@@ -1,0 +1,23 @@
+{
+  "name": "HumanFeed",
+  "short_name": "HumanFeed",
+  "description": "HumanFeed is a Chrome extension that blocks ragebait, bots, and low-effort junk from your Twitter feed. No tracking, no algorithm - just your feed, your rules.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d9ef9",
+  "icons": [
+    {
+      "src": "assets/favicon/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/favicon/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
