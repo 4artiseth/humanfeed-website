@@ -35,9 +35,9 @@ body {
 
 /* Desktop Navigation - Default */
 .nav {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 3px 16px 8px 30px;
+  padding: 3px 24px 8px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +49,7 @@ body {
 /* Ensure desktop elements are visible by default */
 .nav-links {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -148,14 +148,14 @@ body {
 /* Adjust navigation spacing when button is hidden */
 .nav.hero-nav {
   justify-content: space-between;
-  padding: 3px 30px 8px 30px;
+  padding: 3px 40px 8px 40px;
 }
 
 .nav.hero-nav .nav-links {
-  gap: 48px;
+  gap: 56px;
   flex: 1;
   justify-content: center;
-  margin-left: 0;
+  margin-left: 24px;
 }
 
 .nav-brand .logo {
@@ -2150,7 +2150,8 @@ body {
   }
 
   .footer-bg-text {
-    font-size: 120px;
+    font-size: clamp(60px, 15vw, 120px);
+    letter-spacing: -0.03em;
   }
 
   .footer-content {
@@ -2173,7 +2174,10 @@ body {
   }
 
   .footer-bg-text {
-    font-size: 80px;
+    font-size: clamp(40px, 12vw, 80px);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .footer-right {
@@ -2193,6 +2197,21 @@ body {
   .btn-reach-us {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-bg-text {
+    font-size: clamp(32px, 10vw, 60px);
+    letter-spacing: -0.01em;
+  }
+
+  .footer {
+    padding: 50px 0 30px 0;
+  }
+
+  .footer-container {
+    padding: 0 20px;
   }
 }
 
