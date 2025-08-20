@@ -1559,6 +1559,109 @@ body {
   background: linear-gradient(135deg, #ec4899, #db2777);
 }
 
+/* Video GIF-like behavior - Hide all controls and interactions */
+video {
+  /* Remove all video controls and interactions */
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* Prevent right-click context menu */
+  -webkit-context-menu: none;
+  
+  /* iOS Safari specific properties */
+  -webkit-playsinline: true;
+  -webkit-airplay: disabled;
+  
+  /* Ensure no focus outline */
+  outline: none;
+  border: none;
+}
+
+/* Specifically target iOS Safari to disable video controls */
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-timeline {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-current-time-display {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-time-remaining-display {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-toggle-closed-captions-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-mute-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-overlay-enclosure {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* Additional iOS-specific video hiding */
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+  video {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+  }
+}
+
+/* Firefox controls hiding */
+video::-moz-media-controls {
+  display: none !important;
+}
+
 /* Remove fallback placeholder - videos now fill container */
 
 /* New Button Animations */

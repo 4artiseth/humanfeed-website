@@ -32,14 +32,11 @@
     <link rel="stylesheet" href="styles.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet"></noscript>
     <!-- JSON-LD Organization schema -->
     <script type="application/ld+json">
       {
@@ -226,10 +223,10 @@
 
         <!-- Mobile Video Section -->
         <div class="mobile-video-container">
-          <video class="mobile-slider-video" autoplay muted loop playsinline>
+          <video class="mobile-slider-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture controlslist="nodownload noplaybackrate" loading="lazy" preload="metadata">
             <source src="assets/features/slider.mp4" type="video/mp4" />
             <!-- Fallback for browsers that don't support video -->
-            <img src="assets/features/slider.gif" alt="App demonstration" />
+            <img src="assets/features/slider.gif" alt="App demonstration" loading="lazy" />
           </video>
         </div>
       </div>
@@ -334,9 +331,9 @@
           <div class="feature-card">
             <div class="feature-icon-container">
               <div class="feature-icon search-icon">
-                <video class="feature-animation" autoplay muted loop>
+                <video class="feature-animation" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture controlslist="nodownload noplaybackrate" loading="lazy" preload="metadata">
                   <source src="assets/features/graph.mp4" type="video/mp4" />
-                  <img src="assets/features/graph.gif" alt="Graph animation" />
+                  <img src="assets/features/graph.gif" alt="Graph animation" loading="lazy" />
                 </video>
               </div>
             </div>
@@ -351,9 +348,9 @@
           <div class="feature-card">
             <div class="feature-icon-container">
               <div class="feature-icon ai-icon">
-                <video class="feature-animation" autoplay muted loop>
+                <video class="feature-animation" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture controlslist="nodownload noplaybackrate" loading="lazy" preload="metadata">
                   <source src="assets/features/reward.mp4" type="video/mp4" />
-                  <img src="assets/features/reward.gif" alt="Reward animation" />
+                  <img src="assets/features/reward.gif" alt="Reward animation" loading="lazy" />
                 </video>
               </div>
             </div>
@@ -369,9 +366,9 @@
           <div class="feature-card">
             <div class="feature-icon-container">
               <div class="feature-icon collaboration-icon">
-                <video class="feature-animation" autoplay muted loop>
+                <video class="feature-animation" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture controlslist="nodownload noplaybackrate" loading="lazy" preload="metadata">
                   <source src="assets/features/setting.mp4" type="video/mp4" />
-                  <img src="assets/features/setting.gif" alt="Settings animation" />
+                  <img src="assets/features/setting.gif" alt="Settings animation" loading="lazy" />
                 </video>
               </div>
             </div>
@@ -610,36 +607,42 @@
             <div class="footer-column">
               <h4 class="footer-column-title">Social Media</h4>
               <div class="footer-social">
-                <a href="https://x.com/glowducky" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                <a href="https://x.com/glowducky" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Follow us on Twitter/X">
                   <svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
                     fill="currentColor"
+                    role="img"
+                    aria-hidden="true"
                   >
                     <path
                       d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                     />
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/aarti-seth" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                <a href="https://www.linkedin.com/in/aarti-seth" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Connect with us on LinkedIn">
                   <svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
                     fill="currentColor"
+                    role="img"
+                    aria-hidden="true"
                   >
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                     />
                   </svg>
                 </a>
-                <a href="mailto:aarti1seth@outlook.com" class="footer-social-link">
+                <a href="mailto:aarti1seth@outlook.com" class="footer-social-link" aria-label="Send us an email">
                   <svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
                     fill="currentColor"
+                    role="img"
+                    aria-hidden="true"
                   >
                     <path
                       d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
@@ -692,7 +695,7 @@
       document.addEventListener("mousemove", (e) => {
         customCursor.style.left = e.clientX + "px";
         customCursor.style.top = e.clientY + "px";
-      });
+      }, { passive: true });
 
       // Scale cursor on hover over clickable elements
       const clickableElements = document.querySelectorAll(
@@ -830,8 +833,71 @@
         });
       }
 
+      // iOS Safari video GIF-like behavior enforcement
+      function initializeGifVideos() {
+        const videos = document.querySelectorAll('video');
+        
+        videos.forEach(video => {
+          // Ensure all attributes are set programmatically
+          video.autoplay = true;
+          video.muted = true;
+          video.loop = true;
+          video.playsInline = true;
+          video.controls = false;
+          video.setAttribute('playsinline', '');
+          video.setAttribute('webkit-playsinline', '');
+          video.setAttribute('disablepictureinpicture', '');
+          
+          // Remove any event handlers that might interfere
+          video.removeAttribute('onclick');
+          video.removeAttribute('oncontextmenu');
+          
+          // Force play when ready (iOS Safari sometimes needs this)
+          video.addEventListener('loadeddata', function() {
+            video.play().catch(() => {
+              // Silently handle autoplay prevention
+              console.log('Autoplay prevented, but video is ready for interaction');
+            });
+          });
+          
+          // Prevent context menu on right-click/long-press
+          video.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+          });
+          
+          // Prevent any click interactions
+          video.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          });
+          
+          // Prevent touch interactions that might show controls
+          video.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+          }, { passive: false });
+          
+          // Ensure video stays muted (iOS can unmute videos)
+          video.addEventListener('volumechange', function() {
+            if (video.volume !== 0) {
+              video.volume = 0;
+            }
+          });
+          
+          // Force restart when ended (backup for loop attribute)
+          video.addEventListener('ended', function() {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+          });
+        });
+      }
+
       // Start the process when DOM is ready
-      document.addEventListener("DOMContentLoaded", loadSupabaseAndSetupForm);
+      document.addEventListener("DOMContentLoaded", function() {
+        loadSupabaseAndSetupForm();
+        initializeGifVideos();
+      });
 
       // Button scroll behavior for both desktop and mobile
       function handleButtonScroll() {
@@ -880,9 +946,9 @@
         handleButtonScroll();
       }
 
-      // Add scroll listener
-      window.addEventListener("scroll", handleButtonScroll);
-      window.addEventListener("resize", handleButtonScroll);
+      // Add scroll listener with passive option for better performance
+      window.addEventListener("scroll", handleButtonScroll, { passive: true });
+      window.addEventListener("resize", handleButtonScroll, { passive: true });
 
       // Initial check
       document.addEventListener("DOMContentLoaded", initializeNavigation);
