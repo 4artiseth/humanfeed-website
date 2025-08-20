@@ -1662,6 +1662,57 @@ video::-moz-media-controls {
   display: none !important;
 }
 
+/* Additional iOS Safari play button hiding */
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Hide any remaining video control elements */
+video::after,
+video::before {
+  display: none !important;
+}
+
+/* Force hide all pseudo-elements that might show controls */
+video::-webkit-media-controls * {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* iOS specific targeting for play overlay */
+@supports (-webkit-overflow-scrolling: touch) {
+  video {
+    -webkit-appearance: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  
+  video::-webkit-media-controls-overlay-play-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
 /* Remove fallback placeholder - videos now fill container */
 
 /* New Button Animations */
