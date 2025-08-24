@@ -1134,7 +1134,7 @@
           emailInput.disabled = true;
 
           try {
-            // Get UTM + referrer from localStorage
+            // Get UTM from localStorage
             const utm_source = localStorage.getItem("hf_utm_source") || "";
             const utm_campaign = localStorage.getItem("hf_utm_campaign") || "";
 
@@ -1147,7 +1147,6 @@
                   email,
                   utm_source,
                   utm_campaign,
-                  first_referrer,
                 },
               ]);
 
