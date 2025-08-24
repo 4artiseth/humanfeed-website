@@ -204,6 +204,22 @@
       gtag("js", new Date());
       gtag("config", "G-G402H9ER7Q", { send_page_view: true });
     </script>
+
+    <!-- UTM capture script -->
+    <script>
+      (function () {
+        const p = new URLSearchParams(location.search);
+        const source = p.get("utm_source") || "";
+        const campaign = p.get("utm_campaign") || "";
+
+        if (source) localStorage.setItem("hf_utm_source", source);
+        if (campaign) localStorage.setItem("hf_utm_campaign", campaign);
+
+        if (document.referrer && !localStorage.getItem("hf_first_referrer")) {
+          localStorage.setItem("hf_first_referrer", document.referrer);
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- Custom Cursor -->
@@ -372,12 +388,6 @@
                 required
                 class="email-input"
               />
-              <input type="hidden" name="utm_source" />
-              <input type="hidden" name="utm_medium" />
-              <input type="hidden" name="utm_campaign" />
-              <input type="hidden" name="utm_content" />
-              <input type="hidden" name="utm_term" />
-              <input type="hidden" name="first_referrer" />
               <button type="submit" class="btn-join-waitlist">
                 <span>Get Early Access</span>
               </button>
@@ -1121,15 +1131,6 @@
             return;
           }
 
-          // Get UTM values from localStorage
-          const utm_source = localStorage.getItem("hf_utm_source") || "";
-          const utm_medium = localStorage.getItem("hf_utm_medium") || "";
-          const utm_campaign = localStorage.getItem("hf_utm_campaign") || "";
-          const utm_content = localStorage.getItem("hf_utm_content") || "";
-          const utm_term = localStorage.getItem("hf_utm_term") || "";
-          const first_referrer =
-            localStorage.getItem("hf_first_referrer") || "";
-
           // Show loading state
           const emailInput = document.getElementById("email");
           const originalValue = emailInput.value;
@@ -1137,7 +1138,13 @@
           emailInput.disabled = true;
 
           try {
-            // Insert into Supabase table with UTM data
+            // Get UTM + referrer from localStorage
+            const utm_source = localStorage.getItem("hf_utm_source") || "";
+            const utm_campaign = localStorage.getItem("hf_utm_campaign") || "";
+            const first_referrer =
+              localStorage.getItem("hf_first_referrer") || "";
+
+            // Insert into Supabase
             console.log("Inserting into Supabase...");
             const { error } = await supabaseClient
               .from("HumanFeed Waitlist")
@@ -1145,10 +1152,7 @@
                 {
                   email,
                   utm_source,
-                  utm_medium,
                   utm_campaign,
-                  utm_content,
-                  utm_term,
                   first_referrer,
                 },
               ]);
@@ -1165,15 +1169,15 @@
             } else {
               console.log("Success: Email added to waitlist");
 
-              // Fire GA4 event with UTM parameters
-              gtag("event", "signup_complete", {
-                method: "email",
-                utm_source,
-                utm_medium,
-                utm_campaign,
-                utm_content,
-                first_referrer,
-              });
+              // Send GA4 event
+              if (typeof gtag !== "undefined") {
+                gtag("event", "signup_complete", {
+                  method: "email",
+                  utm_source,
+                  utm_campaign,
+                  first_referrer,
+                });
+              }
 
               emailInput.value = "Success! You are on the waitlist.";
               emailInput.style.color = "#22c55e";
@@ -1483,44 +1487,6 @@
         // Initialize slider at center position
         updateContainerRect();
         updateSlider(50);
-      });
-    </script>
-
-    <!-- UTM Capture Script -->
-    <script>
-      (function () {
-        const p = new URLSearchParams(location.search);
-        const keys = [
-          "utm_source",
-          "utm_medium",
-          "utm_campaign",
-          "utm_content",
-          "utm_term",
-        ];
-        keys.forEach((k) => {
-          const v = p.get(k) || "";
-          if (v) localStorage.setItem("hf_" + k, v);
-        });
-        // store referrer once
-        if (document.referrer)
-          localStorage.setItem("hf_first_referrer", document.referrer);
-      })();
-    </script>
-
-    <!-- Fill UTM Hidden Fields -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        [
-          "utm_source",
-          "utm_medium",
-          "utm_campaign",
-          "utm_content",
-          "utm_term",
-          "first_referrer",
-        ].forEach((k) => {
-          const el = document.querySelector('input[name="' + k + '"]');
-          if (el && !el.value) el.value = localStorage.getItem("hf_" + k) || "";
-        });
       });
     </script>
   </body>
