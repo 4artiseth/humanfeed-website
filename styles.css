@@ -795,7 +795,6 @@ body {
   transform: translateZ(0);
 }
 
-
 .slider-handle {
   position: absolute;
   top: 0;
@@ -1002,7 +1001,7 @@ body {
   body {
     cursor: auto;
   }
-  
+
   #custom-cursor {
     display: none;
   }
@@ -1410,7 +1409,6 @@ body {
   font-weight: 600;
 }
 
-
 /* Features Section - Desktop Default */
 .features-section {
   background: #f8fafc;
@@ -1569,14 +1567,14 @@ video {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
+
   /* Prevent right-click context menu */
   -webkit-context-menu: none;
-  
+
   /* iOS Safari specific properties */
   -webkit-playsinline: true;
   -webkit-airplay: disabled;
-  
+
   /* Ensure no focus outline */
   outline: none;
   border: none;
@@ -1701,9 +1699,10 @@ video::-webkit-media-controls * {
 @supports (-webkit-overflow-scrolling: touch) {
   video {
     -webkit-appearance: none !important;
+    appearance: none !important;
     -webkit-tap-highlight-color: transparent !important;
   }
-  
+
   video::-webkit-media-controls-overlay-play-button {
     display: none !important;
     -webkit-appearance: none !important;
@@ -1952,11 +1951,11 @@ video::-webkit-media-controls * {
   .feature-icon {
     height: 220px; /* Increased from 188px for better visibility */
   }
-  
+
   .feature-animation {
     min-height: 220px; /* Ensure consistent height */
   }
-  
+
   .feature-animation img {
     min-height: 220px;
     object-fit: cover;
@@ -2108,18 +2107,18 @@ video::-webkit-media-controls * {
     flex-direction: column;
     gap: 16px;
   }
-  
+
   .feature-card {
     width: 100% !important;
     margin-left: 0 !important;
   }
-  
+
   /* Reset margin for mobile */
   .feature-card:nth-child(4) {
     margin-left: 0 !important;
     width: 100% !important;
   }
-  
+
   /* Mobile: Make last two cards consistent with others */
   .feature-card:nth-child(4),
   .feature-card:nth-child(5) {
@@ -2127,7 +2126,7 @@ video::-webkit-media-controls * {
     width: 100% !important;
     margin-left: 0 !important;
   }
-  
+
   .feature-card:nth-child(4) .feature-icon-container,
   .feature-card:nth-child(5) .feature-icon-container {
     margin: -32px -32px 16px -32px;
@@ -2136,14 +2135,14 @@ video::-webkit-media-controls * {
     border-radius: 24px 24px 0 0;
     overflow: hidden;
   }
-  
+
   .feature-card:nth-child(4) .feature-icon,
   .feature-card:nth-child(5) .feature-icon {
     height: 220px;
     border-radius: 0;
     overflow: hidden;
   }
-  
+
   .feature-card:nth-child(4) .feature-animation,
   .feature-card:nth-child(5) .feature-animation {
     border-radius: 24px 24px 0 0;
