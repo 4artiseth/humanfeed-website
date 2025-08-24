@@ -214,10 +214,6 @@
 
         if (source) localStorage.setItem("hf_utm_source", source);
         if (campaign) localStorage.setItem("hf_utm_campaign", campaign);
-
-        if (document.referrer && !localStorage.getItem("hf_first_referrer")) {
-          localStorage.setItem("hf_first_referrer", document.referrer);
-        }
       })();
     </script>
   </head>
@@ -1141,8 +1137,6 @@
             // Get UTM + referrer from localStorage
             const utm_source = localStorage.getItem("hf_utm_source") || "";
             const utm_campaign = localStorage.getItem("hf_utm_campaign") || "";
-            const first_referrer =
-              localStorage.getItem("hf_first_referrer") || "";
 
             // Insert into Supabase
             console.log("Inserting into Supabase...");
@@ -1175,7 +1169,6 @@
                   method: "email",
                   utm_source,
                   utm_campaign,
-                  first_referrer,
                 });
               }
 
