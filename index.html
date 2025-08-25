@@ -1162,13 +1162,24 @@
             } else {
               console.log("Success: Email added to waitlist");
 
-              // Send GA4 event
-              if (typeof gtag !== "undefined") {
+              // Fire GA4 event safely
+              if (typeof gtag === "function") {
                 gtag("event", "signup_complete", {
                   method: "email",
                   utm_source,
                   utm_campaign,
                 });
+              } else {
+                // Wait a short moment and retry once if gtag is undefined
+                setTimeout(() => {
+                  if (typeof gtag === "function") {
+                    gtag("event", "signup_complete", {
+                      method: "email",
+                      utm_source,
+                      utm_campaign,
+                    });
+                  }
+                }, 300);
               }
 
               emailInput.value = "Success! You are on the waitlist.";
