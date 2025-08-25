@@ -1137,6 +1137,7 @@
             // Get UTM from localStorage
             const utm_source = localStorage.getItem("hf_utm_source") || "";
             const utm_campaign = localStorage.getItem("hf_utm_campaign") || "";
+            const utm_content = localStorage.getItem("hf_utm_content") || "";
 
             // Insert into Supabase
             console.log("Inserting into Supabase...");
@@ -1168,6 +1169,7 @@
                   method: "email",
                   utm_source,
                   utm_campaign,
+                  utm_content,
                 });
               } else {
                 // Wait a short moment and retry once if gtag is undefined
@@ -1177,6 +1179,7 @@
                       method: "email",
                       utm_source,
                       utm_campaign,
+                      utm_content,
                     });
                   }
                 }, 300);
